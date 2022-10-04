@@ -14,6 +14,8 @@ function Square() {
         setAddSq(b => [...b].sort((a, b) => a.number - b.number))
     }
 
+
+
     return (
         <>
             <div className="container">
@@ -24,10 +26,11 @@ function Square() {
                 <button className="btn btn-green" onClick={addingSq}>Add Square</button>
                 <button className="btn btn-red" onClick={sortNumbers}>Sort 9 - 0</button>
             </div>
+            <h3 className="container">count greens: {addSq.filter(s => s.number < 30).length}</h3>
             <div className="container">
                 {
                     addSq.map((sq, i) => <div style={{
-                        backgroundColor: sq.color,
+                        backgroundColor: sq.number < 30 ? 'green' : sq.color,
                         borderRadius: sq.number % 2 ? null : 50 + '%'
                     }} className="square" key={i}>{sq.number}</div>)
                 }
