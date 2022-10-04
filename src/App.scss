@@ -1,0 +1,14 @@
+body {
+  background-color: aquamarine;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+@import 'scss/square.scss';
+@import 'scss/buttons.scss';
