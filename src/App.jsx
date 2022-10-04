@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <h1>DAY 1</h1>
+      <h1 className='container'>DAY 1</h1>
       <div>
         <Square />
       </div>

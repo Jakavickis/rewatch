@@ -10,21 +10,28 @@ function Square() {
         setAddSq(s => [...s, { number: randNumb(1, 100), color: randColor() }]);
     }
 
-
+    const sortNumbers = () => {
+        setAddSq(b => [...b].sort((a, b) => a.number - b.number))
+    }
 
     return (
         <>
-            <button className="btn btn-green" onClick={addingSq}>Add Square</button>
+            <div className="container">
+                <div style={{
+                    backgroundColor: randColor()
+                }} className="square">{randNumb(1, 9999)}</div>
+
+                <button className="btn btn-green" onClick={addingSq}>Add Square</button>
+                <button className="btn btn-red" onClick={sortNumbers}>Sort 9 - 0</button>
+            </div>
             <div className="container">
                 {
                     addSq.map((sq, i) => <div style={{
-                        backgroundColor: sq.color
+                        backgroundColor: sq.color,
+                        borderRadius: sq.number % 2 ? null : 50 + '%'
                     }} className="square" key={i}>{sq.number}</div>)
                 }
             </div>
-            <div style={{
-                backgroundColor: randColor()
-            }} className="square"></div>
         </>
     )
 }
