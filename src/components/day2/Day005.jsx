@@ -37,7 +37,7 @@ function Day005() {
                     fontSize: fontSize ? '40px' : '25px',
                     color: color ? 'black' : 'white',
                     fontWeight: 'bold',
-                    letterSpacing: ls
+                    letterSpacing: ls + 'px'
                 }}>TEST TEST TEST</h1>
                 <h1>{plusingCount}</h1>
             </div>
