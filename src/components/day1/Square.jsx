@@ -6,33 +6,26 @@ function Square() {
 
     const [addSq, setAddSq] = useState([]);
 
-    const addingSq = () => {
-        setAddSq(s => [...s, { number: randNumb(1, 100), color: randColor() }]);
+    const add = () => {
+        setAddSq(s => [...s, { number: randNumb(1, 99), colored: randColor() }])
+
     }
 
-    const sortNumbers = () => {
-        setAddSq(b => [...b].sort((a, b) => a.number - b.number))
+    const sort = () => {
+        setAddSq(s => [...s].sort((a, b) => b.number - a.number))
     }
-
-
 
     return (
         <>
-            <div className="container">
-                <div style={{
-                    backgroundColor: randColor()
-                }} className="square">{randNumb(1, 9999)}</div>
-
-                <button className="btn btn-green" onClick={addingSq}>Add Square</button>
-                <button className="btn btn-red" onClick={sortNumbers}>Sort 9 - 0</button>
-            </div>
-            <h3 className="container">count greens: {addSq.filter(s => s.number < 30).length}</h3>
+            <h2 className="container">number:{addSq.filter(s => s.number < 50).length}</h2>
+            <button onClick={add} className="btn btn-green">add sq</button>
+            <button onClick={sort} className="btn btn-red">sort 9-0</button>
             <div className="container">
                 {
                     addSq.map((sq, i) => <div style={{
-                        backgroundColor: sq.number < 30 ? 'green' : sq.color,
-                        borderRadius: sq.number % 2 ? null : 50 + '%'
-                    }} className="square" key={i}>{sq.number}</div>)
+                        backgroundColor: sq.number < 50 ? 'green' : sq.colored,
+                        borderRadius: sq.number % 2 ? null : '50%'
+                    }} key={i} className="square">{sq.number}</div>)
                 }
             </div>
         </>
