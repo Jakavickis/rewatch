@@ -1,14 +1,15 @@
 import './App.scss';
 import Square from './components/day1/Square';
+import Day005 from './components/day2/Day005';
 
 function App() {
 
   return (
     <>
       <h1 className='container'>DAY 1</h1>
-      <div>
-        <Square />
-      </div>
+      <Square />
+      <h1 className='container'>DAY 2</h1>
+      <Day005 />
     </>
   );
 }
