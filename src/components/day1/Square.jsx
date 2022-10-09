@@ -17,7 +17,7 @@ function Square() {
 
     return (
         <>
-            <h2 className="container">number:{addSq.filter(s => s.number < 50).length}</h2>
+            <h2 className="container">lower then 50 count: {addSq.filter(s => s.number < 50).length}</h2>
             <button onClick={add} className="btn btn-green">add sq</button>
             <button onClick={sort} className="btn btn-red">sort 9-0</button>
             <div className="container">
