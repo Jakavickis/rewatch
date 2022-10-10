@@ -1,0 +1,15 @@
+.containerSelect {
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Poiret One';
+
+    select {
+        background-color: lightseagreen;
+        padding: 10px;
+        width: 200px;
+    }
+}
